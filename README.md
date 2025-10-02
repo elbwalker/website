@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# elbwalker Landing Page
+
+Company landing page for [www.elbwalker.com](https://www.elbwalker.com)
+
+Built with Next.js 15, TypeScript, and Tailwind CSS.
+
+## Tech Stack
+
+- **Next.js 15.5.4** - App Router
+- **React 19** - UI library
+- **TypeScript 5** - Type safety
+- **Tailwind CSS 3.4** - Styling (stable version, no experimental v4)
+- **Vercel** - Deployment platform
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+/app
+  /company      - About page
+  /services     - Services page
+  layout.tsx    - Root layout with header/footer
+  page.tsx      - Home page
+  globals.css   - Global styles
 
-## Learn More
+/components
+  header.tsx    - Site header with navigation
+  footer.tsx    - Site footer
 
-To learn more about Next.js, take a look at the following resources:
+/public         - Static assets
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+tailwind.config.ts  - Tailwind configuration with elbwalker colors
+vercel.json         - Vercel deployment config
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Brand Colors
 
-## Deploy on Vercel
+The site uses the elbwalker brand colors matching the main website:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Primary:** `#01b5e2` (elbwalker cyan)
+- **Background:** `#020617` (slate-950)
+- **Text:** `#e2e8f0` (slate-100)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Full color palette available in `tailwind.config.ts`.
+
+## Deployment
+
+This site is configured for Vercel deployment:
+
+```bash
+# Deploy to Vercel
+vercel
+```
+
+The `vercel.json` configuration ensures standard Next.js deployment without custom build flags.
+
+## Notes
+
+- Uses standard `npm run build` (no environment variables or workarounds needed)
+- All pages are statically generated for optimal performance
+- Responsive design with mobile-first approach
+- Links to main walkerOS documentation at www.walkeros.io
