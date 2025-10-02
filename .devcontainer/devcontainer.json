@@ -1,0 +1,33 @@
+{
+  "name": "walkerOS dev container",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:latest",
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "unifiedjs.vscode-mdx",
+        "esbenp.prettier-vscode",
+        "streetsidesoftware.code-spell-checker",
+        "chakrounanas.turbo-console-log",
+        "openai.chatgpt"
+      ],
+      "settings": {
+        "[typescript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": true
+        },
+        "[json]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": true
+        },
+        "[jsonc]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": true
+        }
+      }
+    }
+  },
+
+  "postCreateCommand": "npm install && npm install -g @anthropic-ai/claude-code @google/gemini-cli @openai/codex",
+  "portsAttributes": {}
+}
