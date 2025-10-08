@@ -30,8 +30,8 @@ export default function Home() {
             <p>
               In 2018, Alexander started to work on walker.js, a lightweight
               library for web tracking based on tagging DOM attributes. Later
-              that year, Ayla joined to create a company around Digital
-              Analytics and they founded elbwalker to have a home for all their
+              that year, Ayla joined to create a company around Analytics
+              implementations and they founded elbwalker to combine their
               consulting projects and product ideas.
             </p>
             <p>
